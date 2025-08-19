@@ -1,7 +1,7 @@
 #!/usr/bin/env sh
 # Name: docker+n8n install
 # Zweck: Auf Debian 12/13 System-Update, Docker & Docker Compose installieren
-#        und n8n via Docker Compose mit persistenter Speicherung & Webhook-URL einrichten.
+#       und n8n via Docker Compose mit persistenter Speicherung & Webhook-URL einrichten.
 # Ausführung: als root
 
 set -eu
@@ -108,3 +108,4 @@ echo "Compose-Datei: ${COMPOSE_FILE}"
 echo "Datenverzeichnis (persistent): ${DATA_DIR}"
 echo
 echo "Logs ansehen:  docker compose -f ${COMPOSE_FILE} logs -f"
+
