@@ -19,7 +19,7 @@ if [[ -z "${OS_CODENAME}" ]]; then
 fi
 
 COMPOSE_DIR="/opt/n8n"
-DATA_DIR="/var/N8N/data"
+DATA_DIR="/root/c4b_n8n"
 COMPOSE_FILE="${COMPOSE_DIR}/docker-compose.yml"
 
 # --- 1) System aktualisieren ---
@@ -82,7 +82,7 @@ services:
       - N8N_PORT=5678
       - GENERIC_TIMEZONE=Europe/Berlin
     volumes:
-      - /var/N8N/data:/home/node/.n8n
+      - /root/c4b_n8n:/home/node/.n8n
     # Für saubere Datei-Ownership
     user: "1000:1000"
 YAML
@@ -101,4 +101,5 @@ echo "Compose-Datei: ${COMPOSE_FILE}"
 echo "Datenverzeichnis (persistent): ${DATA_DIR}"
 echo
 echo "Logs ansehen:  docker compose -f ${COMPOSE_FILE} logs -f"
+
 
