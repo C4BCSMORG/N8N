@@ -101,3 +101,4 @@ echo "Compose-Datei: ${COMPOSE_FILE}"
 echo "Datenverzeichnis (persistent): ${DATA_DIR}"
 echo
 echo "Logs ansehen:  docker compose -f ${COMPOSE_FILE} logs -f"
+
